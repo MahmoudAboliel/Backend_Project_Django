@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <div class="header">
+        <p class="logo">MD</p>
+        <ul>
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">Posts</a>
+            </li>
+            <li>
+                <a href="">Post detail</a>
+            </li>
+            <li>
+                <a href="">About</a>
+            </li>
+            <li>
+                <a href="">Setting</a>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <div id="content">
+            {% block content %}
+            {% endblock content %}
+        </div>
+        <div id="sidebar">
+            <h2>My Blog</h2>
+            <p>This is My Blog</p>
+        </div>
+    </div>
+
+    <script src=""></script>
+</body>
+</html>
